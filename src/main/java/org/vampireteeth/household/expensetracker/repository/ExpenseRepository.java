@@ -10,7 +10,7 @@ import reactor.core.publisher.Mono;
  * Created by steven on 2/04/18.
  */
 @Repository
-public interface ExpenseRepository extends ReactiveCrudRepository<Expense, Long> {
+public interface ExpenseRepository extends ReactiveCrudRepository<Expense, String> {
 
     Flux<Expense> findByDescription(Mono<String> description);
 
